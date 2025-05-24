@@ -1,5 +1,4 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-
 import Navbar from "../components/Navbar";
 import Home from "../pages/Home";
 import About from "../pages/About";
@@ -8,9 +7,10 @@ import Support from "../pages/Support";
 
 const Layout = () => {
   return (
-    <>   <Navbar />
+    <>
+
+      <Navbar />
       <Outlet />
-   
     </>
   );
 };
@@ -26,7 +26,7 @@ let router = createBrowserRouter([
       { path: "/support", element: <Support /> },
     ],
   },
-])
+]);
 
 const Router = () => {
   return (

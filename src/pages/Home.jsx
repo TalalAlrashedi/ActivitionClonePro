@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../components/Footer";
 const articlesData = [
   {
     id: 1,
@@ -73,16 +74,14 @@ const ArticleCard = ({ article }) => (
         {article.title}
       </h3>
       <div className="w-18 h-2 bg-gray-300 lg:mt-3 hover:bg-blue-600"></div>
-      {/* <div className="mt-3 lg:mt-4 w-12 border-b-2 border-blue-500"></div> */}
+
       <div className="overflow-hidden max-h-0 transition-all duration-500 ease-in-out mt-3 lg:mt-4 group-hover:max-h-96">
         <p className="text-gray-300 text-sm leading-relaxed">
           {article.description}
         </p>
         <div className="mt-4">
           <a
-            href={article.url}
-            target="_blank"
-            rel="noreferrer"
+            href="#"
             className="inline-flex items-center text-[12px] text-blue-500 font-semibold hover:text-blue-400 transition-colors"
           >
             Read More
@@ -96,7 +95,7 @@ const ArticleCard = ({ article }) => (
 const Home = () => {
   return (
     <div>
-      <div className="relative h-[600px] flex items-center px-4">
+      <div className="relative flex items-center px-4">
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
           src="https://video.activision.com/activision/cdn/videos/call-of-duty-mobile.mp4"
@@ -148,68 +147,46 @@ const Home = () => {
         </div>
 
         <div
-          className="relative flex items-center justify-center "
+          className="relative flex items-center justify-center w-[90%] mx-auto m-5 "
           style={{
-            borderBottom: "2px solid white",
-            borderTop: "2px solid white",
+            borderBottom: "2px solid grey",
+            borderTop: "2px solid grey",
           }}
         >
-          <div
-            className="px-4 py-2 text-sm font-medium text-gray-900 cursor-pointer active"
-            id="blog-tabs-mobile-default"
-            data-value="all"
-          >
-            <p className="text-2xl text-white">All News</p>
+          <div className="px-4 py-2 text-2xl text-gray-900 cursor-pointer active">
+            <p className="text-2xl font-bold text-white bg-[#182d3a] px-3 ">
+              All News
+            </p>
           </div>
-          <div
-            className="px-4 py-2 cursor-pointer"
-            data-value="activision"
-            style={{ zIndex: 1 }}
-          >
+          <div className="px-4 py-2 cursor-pointer">
             <img
               src="public/games/activision-logo-small.svg"
-              alt="Activision"
-              className="h-6"
+              className="h-6 opacity-60 hover:opacity-100"
             />
           </div>
-          <div
-            className="px-4 py-2 cursor-pointer"
-            data-value="call-of-duty"
-            style={{ zIndex: 1 }}
-          >
+          <div className="px-4 py-2 cursor-pointer">
             <img
               src="public/games/cod-logo (1).svg"
-              alt="Call of Duty"
-              className="h-6"
+              className="h-6 opacity-60 hover:opacity-100"
             />
           </div>
-          <div
-            className="px-4 py-2 cursor-pointer"
-            data-value="tony-hawk"
-            style={{ zIndex: 1 }}
-          >
+          <div className="px-4 py-2 cursor-pointer">
             <img
               src="public/games/tonyHawks.svg"
-              alt="Tony Hawk's Pro Skater 3 + 4"
-              className="h-6"
+              className="h-6 opacity-60 hover:opacity-100"
             />
           </div>
-          <div
-            className="px-4 py-2 cursor-pointer"
-            data-value="crash-bandicoot"
-            style={{ zIndex: 1 }}
-          >
+          <div className="px-4 py-2 cursor-pointer">
             <img
               src="public/games/crash.png"
-              alt="Crash Bandicoot 4 It's About time"
-              className="h-6"
+              className="h-6 opacity-60 hover:opacity-100"
             />
           </div>
         </div>
       </div>
-      <section className="bg-gradient-to-b from-[#343434] to-[#000000] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+      <section className="bg-gradient-to-b from-[#343434] to-[#000000] p-5 text-white">
+        <div className=" mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6  lg:gap-8">
             {articlesData.map((article) => (
               <ArticleCard key={article.id} article={article} />
             ))}
@@ -217,106 +194,7 @@ const Home = () => {
         </div>
       </section>
 
-      <div className="bg-black text-white">
-        <div className="flex flex-col md:flex-row items-center md:items-stretch gap-6 px-6 md:px-20 py-16 border-b border-gray-700">
-          <div className="md:w-1/2 w-full flex flex-col justify-center space-y-6 max-w-lg">
-            <h2 className="font-bold text-xl sm:text-2xl md:text-3xl">
-              WE'RE HERE TO HELP!
-            </h2>
-            <p className="text-sm sm:text-lg leading-relaxed">
-              Get answers to frequently asked questions, check server status,
-              and engage with a support expert
-            </p>
-            <button className="w-40 py-2 border bg-black rounded-full font-semibold hover:cursor-pointer hover:bg-[#143e67] transition">
-              VISIT SUPPORT
-            </button>
-          </div>
-          <div className="md:w-1/2 w-full flex justify-center md:justify-end items-center space-x-4">
-            <img
-              src="public/games/bannergames.png"
-              className=" object-contain bg-cover"
-            />
-          </div>
-        </div>
-
-        <div className="relative bg-black px-4 sm:px-10 md:px-20 py-12 sm:py-16 overflow-hidden">
-          <img
-            src="https://www.activision.com/content/dam/atvi/activision/atvi-touchui/activision/home/assets/joinus-banner-img-spyro.png"
-            className="absolute inset-0 w-full h-full object-cover object-center opacity-35"
-            alt="Background"
-          />
-
-          <div className="relative z-10 flex flex-col md:flex-row gap-10 items-center md:items-start">
-            <div className="w-full md:w-1/2 text-center md:text-left flex flex-col justify-center space-y-4 text-white">
-              <h2 className="font-bold text-3xl sm:text-4xl text-[#0668af]">
-                HAVE FUN
-              </h2>
-              <p className="text-sm sm:text-lg">
-                Learn More About Job Opportunities
-              </p>
-              <div className="flex justify-center md:justify-start">
-                <button className="w-32 py-2 border border-transparent bg-[rgb(11,59,95)] rounded-full font-semibold hover:bg-white hover:text-black transition">
-                  JOIN US
-                </button>
-              </div>
-            </div>
-
-            <div className="w-full md:w-1/2 flex flex-col sm:flex-row justify-center md:justify-between gap-8 text-white text-center sm:text-left">
-              <ul className="space-y-2 flex-1">
-                <p className="text-2xl font-bold">OUR TEAMS</p>
-                <li>GAME DESIGN</li>
-                <li>ART & ANIMATION</li>
-                <li>BRAND MANAGEMENT</li>
-                <li>PRODUCTION</li>
-                <li>QUALITY ASSURANCE</li>
-              </ul>
-              <ul className="space-y-2 flex-1">
-                <li>CUSTOMER SUPPORT</li>
-                <li>STUDIO OPERATIONS</li>
-                <li>PROGRAMMING</li>
-                <li>FINANCE & ACCOUNTING</li>
-                <li>HUMAN RESOURCES</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        style={{ backgroundColor: "#1a1a1a" }}
-        className="py-10 px-4 sm:px-8"
-      >
-        <div className="max-w-7xl mx-auto flex flex-wrap justify-between gap-10 text-white">
-          <div className="flex flex-col min-w-[180px]">
-            <h3 className="text-xl font-bold mb-4">FOLLOW US</h3>
-            <ul className="flex gap-3 mb-6">
-              <li className="border border-white rounded-full p-2 hover:bg-white hover:text-black transition"></li>
-              <li className="border border-white rounded-full p-2 hover:bg-white hover:text-black transition"></li>
-              <li className="border border-white rounded-full p-2 hover:bg-white hover:text-black transition"></li>
-              <li className="border border-white rounded-full p-2 hover:bg-white hover:text-black transition"></li>
-            </ul>
-          </div>
-          <div className="flex flex-col min-w-[140px]">
-            <h3 className="text-xl font-bold mb-4">POPULAR GAMES</h3>
-            <ul className="space-y-2 text-gray-300">
-              <li className="hover:underline">Call of Duty </li>
-              <li className="hover:underline">Tony Hawk Pro Skater</li>
-              <li className="hover:underline">Crash Bandicoot </li>
-              <li className="hover:underline">Spyro</li>
-              <li className="hover:underline">Sekiro</li>
-            </ul>
-          </div>
-          <div className="flex flex-col min-w-[140px]">
-            <h3 className="text-xl font-bold mb-4">COMPANY</h3>
-            <ul className="space-y-2 text-gray-300">
-              <li className="hover:underline">Press </li>
-              <li className="hover:underline">Research </li>
-              <li className="hover:underline">Activision Blizzard </li>
-              <li className="hover:underline">Contact Us </li>
-            </ul>
-          </div>
-        </div>{" "}
-      </div>
+      <Footer />
     </div>
   );
 };
