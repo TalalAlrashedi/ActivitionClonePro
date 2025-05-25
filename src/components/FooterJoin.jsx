@@ -19,7 +19,7 @@ export const FooterJoin = () => {
           </div>
           <div className="md:w-1/2 w-full flex justify-center md:justify-end items-center space-x-4">
             <img
-              src="public/games/bannergames.png"
+              src="/games/bannergames.png"
               className=" object-contain bg-cover"
             />
           </div>
