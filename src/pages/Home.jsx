@@ -1,5 +1,9 @@
 import React from "react";
 import Footer from "../components/Footer";
+import { FaArrowLeftLong } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
+import { GoDot } from "react-icons/go";
+import { GoDotFill } from "react-icons/go";
 const articlesData = [
   {
     id: 1,
@@ -95,7 +99,7 @@ const ArticleCard = ({ article }) => (
 const Home = () => {
   return (
     <div>
-      <div className="relative flex items-center px-4">
+      <div className="relative h-full lg:h-screen flex items-center px-4">
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
           src="https://video.activision.com/activision/cdn/videos/call-of-duty-mobile.mp4"
@@ -111,33 +115,43 @@ const Home = () => {
             <span className="text-2xl text-white font-bold mb-6">
               Available Now For iOS and Android!
             </span>
-            <div className="flex space-x-4">
-              <button className="bg-sky-900 text-amber-50 font-bold px-10 py-4 text-xl rounded-2xl shadow-lg hover:bg-sky-800 transition">
-                Download Now
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+              <button className="hover:cursor-pointer bg-[rgb(11,59,95)] px-6 py-3 rounded-full text-white font-bold">
+                DOWNLOAD NOW
               </button>
-              <button className="px-10 py-4 border border-white text-white rounded hover:bg-sky-900 hover:text-black transition">
-                Visit
+              <button className="hover:bg-[rgb(11,59,95)] px-10 py-3 hover:cursor-pointer rounded-full text-amber-50 border-white border  font-bold">
+                VISIT SITE
               </button>
             </div>
           </div>
+        </div>
 
-          <div className=" bg-amber-100 w-[40%]">
-            <div className="absolute bottom-1 mr-15 left-1/2 transform  z-30 flex space-x-4">
-              <button
-                className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                aria-label="Previous"
-                type="button"
-              >
-                Previous
-              </button>
-              <button
-                className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                aria-label="Next"
-                type="button"
-              >
-                Next
-              </button>
+        <div className="mb-11 lg:mb-0 lg:flex hidden w-80 absolute bottom-1 left-1/2 bg-[rgba(0,0,0,0.5)] p-4 mt-7 rounded-full transform -translate-x-1/2 justify-between items-center z-100 text-xl text-gray-300">
+          <div>
+            <FaArrowLeftLong />
+          </div>
+          <div className="flex gap-2">
+            <div>
+              <GoDot />
             </div>
+            <div>
+              <GoDot />
+            </div>
+            <div>
+              <GoDot />
+            </div>
+            <div>
+              <GoDotFill />
+            </div>
+            <div>
+              <GoDot />
+            </div>
+            <div>
+              <GoDot />
+            </div>
+          </div>
+          <div>
+            <FaArrowRight />
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ const FooterLinks = () => {
     <div>
       <div
         style={{ backgroundColor: "#1a1a1a" }}
-        className="py-10 px-4 sm:px-8"
+        className="py-10 px-4 sm:px-8 h-full"
       >
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between gap-10 text-white">
           <div className="flex flex-col min-w-[180px]">

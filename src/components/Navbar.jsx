@@ -11,7 +11,7 @@ const pagesUrl = [
 
 const Navbar = () => {
   return (
-    <div className="fixed top-0 w-screen py-3 border-b border-b-orange-50 bg-[rgba(0,0,0,0.79)] text-gray-200 z-12 overflow-hidden">
+    <div className="fixed top-0 w-screen py-3 border-b border-b-orange-50 bg-[rgba(0,0,0,0.79)] text-gray-200 z-100 overflow-hidden">
       <div className="lg:hidden absolute top-1 m-4 left-2 text-4xl">
         <CiMenuBurger className="text-white font-bold align-middle" />
       </div>
