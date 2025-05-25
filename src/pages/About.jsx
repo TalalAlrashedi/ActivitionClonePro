@@ -40,73 +40,55 @@ const Imges = [
 
 const gameCover = [
   {
-    img: "./public/game_covers/BO6-FOB.jpg",
-    name: "CALL OF DUTY BALCK OPS 6",
+    img: "/game_covers/BO6-FOB.jpg",
+    name: "CALL OF DUTY BLACK OPS 6",
     subname: "MATURE 17+",
   },
   {
-    img: "./public/game_covers/codm-boxart.jpg",
-    name: "CALL OF DUTY :WARZONE",
+    img: "/game_covers/codm-boxart.jpg",
+    name: "CALL OF DUTY : WARZONE",
     subname: "MATURE 17+",
   },
   {
-    img: "./public/game_covers/wz-boxart.jpg",
-    name: "CALL OF DUTY MODERN WARFARE lll",
-    subname: "MATURE 17 +",
+    img: "/game_covers/wz-boxart.jpg",
+    name: "CALL OF DUTY MODERN WARFARE III",
+    subname: "MATURE 17+",
   },
   {
-    img: "./public/game_covers/CTRumble_KEYART_SEASON2_1080X1350_AVAILABLE_NOW.jpg",
-    name: "CRASH TEAM RUMBLE ",
-    subname: "MATURE 10 +",
+    img: "/game_covers/CTRumble_KEYART_SEASON2_1080X1350_AVAILABLE_NOW.jpg",
+    name: "CRASH TEAM RUMBLE",
+    subname: "MATURE 10+",
   },
   {
-    img: "./public/game_covers/sekiro-boxart.jpg",
-    name: "SEKIRO ",
-    subname: "NATURE 17 +",
+    img: "/game_covers/sekiro-boxart.jpg",
+    name: "SEKIRO",
+    subname: "MATURE 17+",
   },
   {
-    img: "./public/game_covers/spyro-boxart.png",
+    img: "/game_covers/spyro-boxart.png",
     name: "SPYRO",
-    subname: "MATURE 10 +",
+    subname: "MATURE 10+",
   },
 ];
 
 const studioLogo = [
-  {
-    img: "./public/studio_logos/logo_atvi-shanghai-studio.png",
-  },
-  {
-    img: "./public/studio_logos/logo_beenox.png",
-  },
-  {
-    img: "./public/studio_logos/logo_demonware.png",
-  },
-  {
-    img: "./public/studio_logos/logo_highmoon-studios.png",
-  },
-  {
-    img: "./public/studio_logos/logo_infinityward.png",
-  },
-  {
-    img: "./public/studio_logos/logo_raven.png",
-  },
-  {
-    img: "./public/studio_logos/logo_sledgehammer.png",
-  },
-  {
-    img: "./public/studio_logos/logo_treyarch.png",
-  },
-  {
-    img: "./public/studio_logos/logo-toysforbob.png",
-  },
+  { img: "/studio_logos/logo_atvi-shanghai-studio.png" },
+  { img: "/studio_logos/logo_beenox.png" },
+  { img: "/studio_logos/logo_demonware.png" },
+  { img: "/studio_logos/logo_highmoon-studios.png" },
+  { img: "/studio_logos/logo_infinityward.png" },
+  { img: "/studio_logos/logo_raven.png" },
+  { img: "/studio_logos/logo_sledgehammer.png" },
+  { img: "/studio_logos/logo_treyarch.png" },
+  { img: "/studio_logos/logo-toysforbob.png" },
 ];
 
 function About() {
   return (
-    <div className="bg-black  min-h-screen text-white sm:flex sm:mx-auto flex-col ">
+    <div className="bg-black min-h-screen text-white sm:flex sm:mx-auto flex-col">
       <img
-        src="./public/aboutImages/bannerAbout.png"
-
+        src="/aboutImages/bannerAbout.png"
+        alt="Banner"
         className="w-full object-cover mt-8"
       />
 
@@ -165,7 +147,7 @@ function About() {
 
       <div className="flex justify-center items-center mb-10">
         <button className="bg-[rgb(11,59,95)] hover:cursor-pointer rounded-full w-30 h-10">
-          LRARN MORE
+          LEARN MORE
         </button>
       </div>
 
@@ -176,14 +158,14 @@ function About() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto mt-5">
           {Imges.map((item, index) => (
-            <div key={index} className="flex  flex-col items-center">
+            <div key={index} className="flex flex-col items-center">
               <img
                 src={item.img}
                 alt={item.name}
                 className="mt-5 rounded-full w-50 h-50 object-cover"
               />
-              <h3 className=" font-bold mt-2">{item.name}</h3>
-              <p className="text-center ">{item.subname}</p>
+              <h3 className="font-bold mt-2">{item.name}</h3>
+              <p className="text-center">{item.subname}</p>
             </div>
           ))}
         </div>
@@ -191,16 +173,16 @@ function About() {
 
       <div>
         <div className="flex justify-center p-6 border-b max-w-4xl mx-auto border-gray-500">
-          <h1 className="text-2xl font-bold mt-9">Our GAMSE</h1>
+          <h1 className="text-2xl font-bold mt-9">Our Games</h1>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4  gap-6 max-w-4xl mx-auto mt-5 p-6 rounded-lg">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-5 p-6 rounded-lg">
           {gameCover.map((item, index) => (
-            <div key={index} className="shadow-md  flex flex-col items-center">
+            <div key={index} className="shadow-md flex flex-col items-center">
               <img
                 src={item.img}
                 alt={item.name}
-                className="mt-5 h-[30vh]  hover:scale-110 hover:shadow-xl transition-transform duration-300"
+                className="mt-5 h-[30vh] hover:scale-110 hover:shadow-xl transition-transform duration-300"
               />
               <h3 className="text-center mt-5">{item.name}</h3>
               <p className="text-center mt-5">{item.subname}</p>
@@ -229,6 +211,7 @@ function About() {
           ))}
         </div>
       </div>
+
       <Footer />
     </div>
   );
