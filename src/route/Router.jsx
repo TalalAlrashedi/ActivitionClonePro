@@ -8,8 +8,8 @@ import Support from "../pages/Support";
 const Layout = () => {
   return (
     <>
-
       <Navbar />
+
       <Outlet />
     </>
   );
@@ -20,6 +20,7 @@ let router = createBrowserRouter([
     path: "/",
     element: <Layout />,
     children: [
+      { path: "/", element: <Home /> },
       { path: "/home", element: <Home /> },
       { path: "/about", element: <About /> },
       { path: "/careers", element: <Careers /> },
