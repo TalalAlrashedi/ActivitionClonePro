@@ -40,32 +40,32 @@ const Imges = [
 
 const gameCover = [
   {
-    img: "/public/game_covers/BO6-FOB.jpg",
+    img: "./public/game_covers/BO6-FOB.jpg",
     name: "CALL OF DUTY BALCK OPS 6",
     subname: "MATURE 17+",
   },
   {
-    img: "/public/game_covers/codm-boxart.jpg",
+    img: "./public/game_covers/codm-boxart.jpg",
     name: "CALL OF DUTY :WARZONE",
     subname: "MATURE 17+",
   },
   {
-    img: "/public/game_covers/wz-boxart.jpg",
+    img: "./public/game_covers/wz-boxart.jpg",
     name: "CALL OF DUTY MODERN WARFARE lll",
     subname: "MATURE 17 +",
   },
   {
-    img: "/public/game_covers/CTRumble_KEYART_SEASON2_1080X1350_AVAILABLE_NOW.jpg",
+    img: "./public/game_covers/CTRumble_KEYART_SEASON2_1080X1350_AVAILABLE_NOW.jpg",
     name: "CRASH TEAM RUMBLE ",
     subname: "MATURE 10 +",
   },
   {
-    img: "/public/game_covers/sekiro-boxart.jpg",
+    img: "./public/game_covers/sekiro-boxart.jpg",
     name: "SEKIRO ",
     subname: "NATURE 17 +",
   },
   {
-    img: "/public/game_covers/spyro-boxart.png",
+    img: "./public/game_covers/spyro-boxart.png",
     name: "SPYRO",
     subname: "MATURE 10 +",
   },
@@ -73,31 +73,31 @@ const gameCover = [
 
 const studioLogo = [
   {
-    img: "/public/studio_logos/logo_atvi-shanghai-studio.png",
+    img: "./public/studio_logos/logo_atvi-shanghai-studio.png",
   },
   {
-    img: "/public/studio_logos/logo_beenox.png",
+    img: "./public/studio_logos/logo_beenox.png",
   },
   {
-    img: "/public/studio_logos/logo_demonware.png",
+    img: "./public/studio_logos/logo_demonware.png",
   },
   {
-    img: "/public/studio_logos/logo_highmoon-studios.png",
+    img: "./public/studio_logos/logo_highmoon-studios.png",
   },
   {
-    img: "/public/studio_logos/logo_infinityward.png",
+    img: "./public/studio_logos/logo_infinityward.png",
   },
   {
-    img: "/public/studio_logos/logo_raven.png",
+    img: "./public/studio_logos/logo_raven.png",
   },
   {
-    img: "/public/studio_logos/logo_sledgehammer.png",
+    img: "./public/studio_logos/logo_sledgehammer.png",
   },
   {
-    img: "/public/studio_logos/logo_treyarch.png",
+    img: "./public/studio_logos/logo_treyarch.png",
   },
   {
-    img: "/public/studio_logos/logo-toysforbob.png",
+    img: "./public/studio_logos/logo-toysforbob.png",
   },
 ];
 
@@ -105,7 +105,7 @@ function About() {
   return (
     <div className="bg-black  min-h-screen text-white sm:flex sm:mx-auto flex-col ">
       <img
-        src="public/aboutImages/bannerAbout.png"
+        src="./public/aboutImages/bannerAbout.png"
 
         className="w-full object-cover mt-8"
       />
